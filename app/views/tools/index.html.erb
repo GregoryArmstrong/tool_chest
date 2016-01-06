@@ -1,0 +1,15 @@
+<% flash.each do |type, msg| %>
+  <h1><%= content_tag :div, msg, class: "flash_#{type}" %></h1>
+<% end %>
+
+<h1>All Tools</h1>
+
+<% @tools.each do |tool| %>
+  <!-- <p><%= tool.name %>, use: (<%= tool.use %>)</p> -->
+  <!-- <p><%= link_to(tool.name, tool_path(tool)) %>, use: <%= tool.use %></p> -->
+  <p><%= link_to(tool.name, tool) %>, use: <%= tool.use %></p>
+  <p><%= link_to "Edit", edit_tool_path(tool) %></p>
+  <p><%= link_to "Delete", tool_path(tool), method: :delete %></p>
+<% end %>
+
+<%= link_to("New Tool", new_tool_path) %>

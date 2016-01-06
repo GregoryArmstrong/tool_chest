@@ -1,0 +1,7 @@
+<%= flash[:notice] %>
+
+<h2>Tools:</h2>
+<% @user.tools.each do |tool| %>
+  <%= tool.name %>
+  <%= tool.use %>
+<% end %>
