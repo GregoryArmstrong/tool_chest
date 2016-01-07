@@ -1,6 +1,6 @@
 require 'test_helper'
 
-class AdminCategoriesTest < ActionDispatch::IntegrationTest
+class AdminToolsTest < ActionDispatch::IntegrationTest
   test "logged in admin sees full CRUD tools index" do
     admin = User.create(username: "admin", password: "password", role: 1)
 

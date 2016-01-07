@@ -17,10 +17,10 @@ class ToolsController < ApplicationController
 
   def create
     @tool = Tool.new(tool_params)
-    @user = User.find(session[:user_id])
+    # @user = User.find(session[:user_id])
     if @tool.save
       flash[:notice] = "Tool created."
-      @user.tools << @tool
+      # @user.tools << @tool
     else
       flash[:error] = @tool.errors.full_messages.join(", ")
     end
